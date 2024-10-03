@@ -44,7 +44,6 @@ const perguntas = [//abre a lista de objetos (itens)
 let posicao = 0;
 let perguntaAtual;
 
-
 function mostraPergunta() {
     perguntaAtual = perguntas[posicao];
     caixaPergunta.textContent = perguntaAtual.enunciado;
@@ -56,6 +55,7 @@ function mostraAlternativas() {
         botaoAternativas.textContent = alternativa.texto;
         botaoAternativas.addEventListener("click", function () {
             posicao++;
+            mostraPergunta();
         });
         caixaAlternativa.appendChild(botaoAternativas);
     }
