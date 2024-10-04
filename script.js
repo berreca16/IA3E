@@ -32,32 +32,44 @@ const perguntas = [//abre a lista de objetos (itens)
         enunciado: "Você sabe desenhar?",
         alternativas: [{
             texto: "Sim",
-            afrimação: "Sim, sou muito boa"
+            afirmação: "Sim, sou muito boa"
         },
         {
             texto: "Não",
-            afrimação: "Não é muito a minha praia"
+            afirmação: "Não é muito a minha praia"
         }
         ]
     }
 ]
 let posicao = 0;
 let perguntaAtual;
+let respostas = "";
 
 function mostraPergunta() {
+    if (posicao>=perguntas.length){
+        mostraResultado();
+        return;
+    }
     perguntaAtual = perguntas[posicao];
     caixaPergunta.textContent = perguntaAtual.enunciado;
+    caixaAlternativa.textContent = " ";
     mostraAlternativas();
 }
 function mostraAlternativas() {
-    for (const alternativa of perguntaAtual.alternativa) {
+    for (const alternativa of perguntaAtual.alternativas) {
         const botaoAternativas = document.createElement("button");
         botaoAternativas.textContent = alternativa.texto;
-        botaoAternativas.addEventListener("click", function () {
-            posicao++;
-            mostraPergunta();
-        });
+        botaoAternativas.addEventListener("click", ()=> respostasSelecionadas(alternativa));
         caixaAlternativa.appendChild(botaoAternativas);
     }
+}
+function respostasSelecionadas(opcaoSelecionada){
+    const afirmacoes = opcaoSelecionada.afirmação;
+    respostas = afirmacoes;
+    posicao++;
+    mostraPergunta();
+}
+function mostraResultado(){
+    caixaPergunta.textContent = "Você gostou do questionario?";
 }
 mostraPergunta();
