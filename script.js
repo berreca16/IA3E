@@ -5,10 +5,10 @@ const caixaResultado = document.querySelector('.caixa-resultado');
 
 const perguntas = [//abre a lista de objetos (itens)
     {//abre o item
-        enunciado: "Você gosta de cachorros?",
+        enunciado: "Você gosta de ter contato com os animais?",
         alternativas: [{
             texto: "Sim",
-            afirmação: "Sim gosto muito"
+            afirmação: "Sim, sempre que eu posso"
         },
         {
             texto: "Não",
@@ -17,7 +17,7 @@ const perguntas = [//abre a lista de objetos (itens)
         ]
     },
     {
-        enunciado: "Você gosta de ouvir músicas?",
+        enunciado: "Você frequentemente ouve músicas?",
         alternativas: [{
             texto: "Sim",
             afirmação: "Sim, sempre"
@@ -70,6 +70,8 @@ function respostasSelecionadas(opcaoSelecionada){
     mostraPergunta();
 }
 function mostraResultado(){
-    caixaPergunta.textContent = "Você gostou do questionario?";
+    caixaPergunta.textContent = "Confira suas respostas";
+    textoresultado.textContent = respostas;
+    caixaAlternativa.textContent = "";
 }
 mostraPergunta();
