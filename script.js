@@ -8,36 +8,36 @@ const perguntas = [//abre a lista de objetos (itens)
     {//abre o item
         enunciado: "Você gosta de ter contato com os animais?",
         alternativas: [{
-            texto: "Sim, eu gosto",
-            afirmação: "Sim, sempre que eu posso"
+            texto: "Sim, eu gosto.",
+            afirmação: "Sim, sempre que eu posso."
         },
         {
             texto: "Não gosto",
-            afirmação: " Não, eu detesto"
+            afirmação: " Não, eu detesto."
         }
         ]
     },
     {
         enunciado: "Você frequentemente ouve músicas?",
         alternativas: [{
-            texto: "Sim, eu amo",
-            afirmação: "Sim, sempre"
+            texto: "Sim, eu amo.",
+            afirmação: "Sim, sempre."
         },
         {
-            texto: "Não tenho tempo ",
-            afirmação: "Não gosto"
+            texto: "Não tenho tempo. ",
+            afirmação: "Não gosto."
         }
         ]
     },
     {
         enunciado: "Você sabe desenhar?",
         alternativas: [{
-            texto: "Sim, sou muito boa",
+            texto: "Sim, sou muito boa.",
             afirmação: "Sim, gosto muito"
         },
         {
-            texto: "Não sei desenhar",
-            afirmação: "Não é muito a minha praia"
+            texto: "Não sei desenhar.",
+            afirmação: "Não é muito a minha praia."
         }
         ]
     }
@@ -66,7 +66,7 @@ function mostraAlternativas() {
 }
 function respostasSelecionadas(opcaoSelecionada){
     const afirmacoes = opcaoSelecionada.afirmação;
-    respostas = afirmacoes;
+    respostas += afirmacoes;
     posicao++;
     mostraPergunta();
 }
