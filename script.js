@@ -2,28 +2,29 @@ const caixaPrincipal = document.querySelector('.caixa-principal');
 const caixaPergunta = document.querySelector('.caixa-pergunta');
 const caixaAlternativa = document.querySelector('.caixa-alternativa');
 const caixaResultado = document.querySelector('.caixa-resultado');
+const textoresultado = document.querySelector('.texto-resultado');
 
 const perguntas = [//abre a lista de objetos (itens)
     {//abre o item
         enunciado: "Você gosta de ter contato com os animais?",
         alternativas: [{
-            texto: "Sim",
+            texto: "Sim, eu gosto",
             afirmação: "Sim, sempre que eu posso"
         },
         {
-            texto: "Não",
-            afirmação: " Não gosto"
+            texto: "Não gosto",
+            afirmação: " Não, eu detesto"
         }
         ]
     },
     {
         enunciado: "Você frequentemente ouve músicas?",
         alternativas: [{
-            texto: "Sim",
+            texto: "Sim, eu amo",
             afirmação: "Sim, sempre"
         },
         {
-            texto: "Não",
+            texto: "Não tenho tempo ",
             afirmação: "Não gosto"
         }
         ]
@@ -31,11 +32,11 @@ const perguntas = [//abre a lista de objetos (itens)
     {
         enunciado: "Você sabe desenhar?",
         alternativas: [{
-            texto: "Sim",
-            afirmação: "Sim, sou muito boa"
+            texto: "Sim, sou muito boa",
+            afirmação: "Sim, gosto muito"
         },
         {
-            texto: "Não",
+            texto: "Não sei desenhar",
             afirmação: "Não é muito a minha praia"
         }
         ]
